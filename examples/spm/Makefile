@@ -7,5 +7,9 @@ gen:
 
 all: run gen
 
+yo:
+	yosys -p "read_verilog -sv build/tmp_sky130_fd_sc_hd_cells_fixed.v spm.gl.v ; write_json build/design.json;" > build/yosys.log
+
+
 clean:
 	rm -rf out build

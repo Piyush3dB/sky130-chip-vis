@@ -12,6 +12,7 @@ import sys
 from time import sleep
 import copy
 import argparse
+import pdb as pdb
 
 parser = argparse.ArgumentParser(formatter_class=argparse.RawTextHelpFormatter)
 
@@ -190,6 +191,7 @@ print("Parsing netlist using yosys (slow)...")
 design_json = os.path.join(BUILD_DIR, "design.json")
 yosys_log = os.path.join(BUILD_DIR, "yosys.log")
 os.system(f'yosys -p "read_verilog -sv {CELL_MODELS} {GL_NETLIST} ; write_json {design_json};" > {yosys_log}')
+#pdb.set_trace()
 
 print("Reading design")
 with open(design_json) as f:
@@ -205,6 +207,9 @@ print(f"Design modules: {list(modules_design.keys())}")
 assert len(modules_design.keys()) == 1
 DESIGN_NAME = list(modules_design.keys())[0]
 top = modules_design[DESIGN_NAME]
+
+#pdb.set_trace()
+
 
 top_ports = {}
 for name, data in top["ports"].items():

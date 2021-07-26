@@ -635,6 +635,6 @@ Successfully finished Verilog frontend.
 3. Executing JSON backend.
 
 End of script. Logfile hash: 8f36acf539
-CPU: user 0.28s system 0.05s, MEM: 61.49 MB total, 34.21 MB resident
+CPU: user 0.29s system 0.00s, MEM: 61.49 MB total, 34.20 MB resident
 Yosys 0.7 (git sha1 61f6811, gcc 6.2.0-11ubuntu1 -O2 -fdebug-prefix-map=/build/yosys-OIL3SR/yosys-0.7=. -fstack-protector-strong -fPIC -Os)
 Time spent: 81% 3x read_verilog (0 sec), 18% 2x write_json (0 sec)
