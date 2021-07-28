@@ -7,11 +7,8 @@ VCD=spm.vcd
 echo "PDK = $PDK"
 echo "PDK_ROOT = $PDK_ROOT"
 
-PRIMITIVES=$PDK_ROOT/open_pdks/sky130/sky130A/libs.ref/$PDK/verilog/primitives.v
-CELLS=$PDK_ROOT/open_pdks/sky130/sky130A/libs.ref/$PDK/verilog/$PDK.v
-
-PRIMITIVES=/home/piyush/Downloads/Git/pdk/sky130A/libs.ref/sky130_fd_sc_hd/verilog/primitives.v
-CELLS=/home/piyush/Downloads/Git/pdk/sky130A/libs.ref/sky130_fd_sc_hd/verilog/sky130_fd_sc_hd.v
+PRIMITIVES=$PDK_ROOT/sky130A/libs.ref/$PDK/verilog/primitives.v
+CELLS=$PDK_ROOT/sky130A/libs.ref/$PDK/verilog/$PDK.v
 
 echo $PRIMITIVES
 echo $CELLS
