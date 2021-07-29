@@ -208,7 +208,7 @@ assert len(modules_design.keys()) == 1
 DESIGN_NAME = list(modules_design.keys())[0]
 top = modules_design[DESIGN_NAME]
 
-#pdb.set_trace()
+pdb.set_trace()
 
 
 top_ports = {}
