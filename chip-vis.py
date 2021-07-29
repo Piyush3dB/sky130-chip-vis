@@ -208,7 +208,6 @@ assert len(modules_design.keys()) == 1
 DESIGN_NAME = list(modules_design.keys())[0]
 top = modules_design[DESIGN_NAME]
 
-pdb.set_trace()
 
 
 top_ports = {}
@@ -306,6 +305,9 @@ for k, vv in cell_to_output_nets.items():
 
 assert all(len(cell_to_output_nets_inv[net]) == 1 for net in output_nets)
 output_net_to_cell = {net: cell_to_output_nets_inv[net][0] for net in output_nets}
+
+pdb.set_trace()
+
 
 ###########################################
 # Parse VCD
