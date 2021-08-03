@@ -17,12 +17,21 @@ jq:
 	cp ../../all.jq  ~/.jq
 
 
+json2jqpath: jq
+	jq json2jqpath ./build/design.json
+
+json2xpath: jq
+	jq json2xpath ./build/design.json
+
+
 ports: jq
 	jq ports ./build/design.json
 
 netnames: jq
-	jq netnames ./build/design.json
+	jq netnames ./build/design.json > netnames.json
 
 cells: jq
 	jq cells ./build/design.json
 
+netnames_bits: jq
+	jq netnames_bits ./build/design.json > netnames.json

@@ -209,7 +209,7 @@ DESIGN_NAME = list(modules_design.keys())[0]
 top = modules_design[DESIGN_NAME]
 
 
-
+# done
 top_ports = {}
 for name, data in top["ports"].items():
     if name in IGNORE_PORTS:
@@ -226,6 +226,7 @@ else:
 
 print()
 
+# done
 top_nets = {}
 for name, data in top["netnames"].items():
     if name in IGNORE_PORTS:
@@ -244,6 +245,7 @@ print()
 def startswithany(string, prefixes):
     return any(string.startswith(x) for x in prefixes)
 
+# cells done
 phy_cells = {}
 real_cells = {}
 
@@ -279,9 +281,11 @@ print()
 print(f"Real cell types: {set(x[0] for x in real_cells.values())}")
 print()
 
+# todo
 print("Matching nets to cells...")
 top_nets_inv = {}
 
+# top_nets is "net_names"
 for k, v in top_nets.items():
     if v not in top_nets_inv:
         top_nets_inv[v] = []
@@ -306,6 +310,8 @@ for k, vv in cell_to_output_nets.items():
 assert all(len(cell_to_output_nets_inv[net]) == 1 for net in output_nets)
 output_net_to_cell = {net: cell_to_output_nets_inv[net][0] for net in output_nets}
 
+
+# here now solve
 pdb.set_trace()
 
 
