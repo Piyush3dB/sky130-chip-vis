@@ -1,0 +1,6 @@
+read_verilog spm.v
+read_liberty -lib sky130_fd_sc_hd__tt_025C_1v80.lib
+synth -top spm
+abc -liberty sky130_fd_sc_hd__tt_025C_1v80.lib
+show -format dot -prefix ./spm
+

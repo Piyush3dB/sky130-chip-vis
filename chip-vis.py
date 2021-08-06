@@ -312,7 +312,7 @@ output_net_to_cell = {net: cell_to_output_nets_inv[net][0] for net in output_net
 
 
 # here now solve
-pdb.set_trace()
+#pdb.set_trace()
 
 
 ###########################################
@@ -350,6 +350,9 @@ else:
 
 signals_name_map = {x.replace("\\", ""): x for x in signals}
 signals_keep = list(signals_name_map.keys())
+
+
+pdb.set_trace()
 
 print("Searching for reset")
 if len(RST) < 1:
