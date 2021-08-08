@@ -310,7 +310,7 @@ for k, vv in cell_to_output_nets.items():
 assert all(len(cell_to_output_nets_inv[net]) == 1 for net in output_nets)
 output_net_to_cell = {net: cell_to_output_nets_inv[net][0] for net in output_nets}
 
-
+# todo cell_to_output_nets {}
 # here now solve
 #pdb.set_trace()
 
